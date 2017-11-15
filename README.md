@@ -4,7 +4,7 @@ HIPAA Compliance for Meteor Apps.  Meta package containing audit log, user accou
 
 
 
-==================================
+-----------------------------------------
 #### Table of Contents  
 
 - Installation  
@@ -19,21 +19,21 @@ HIPAA Compliance for Meteor Apps.  Meta package containing audit log, user accou
 - HipaaPolicies API
 
 
-==================================
+-----------------------------------------
 #### Installation  
 
 ``meteor add clinical:hipaa``
 
-================================================
+-----------------------------------------
 ####  HIPAA Compliance Questionaire
 
 https://catalyze.io/hipaa-self-assessment-checklist
 
 
-==================================
+-----------------------------------------
 #### Packages
 
-This is a meta package, and includes the following sub-packages:  
+This is a meta package written for Blaze, and includes the following sub-packages:  
 
 [accounts-base](https://atmospherejs.com/meteor/accounts-base)  
 [accounts-password](https://atmospherejs.com/meteor/accounts-password)  
@@ -45,39 +45,40 @@ This is a meta package, and includes the following sub-packages:
 [jparker:crypto-aes](https://atmospherejs.com/jparker/crypto-aes)  
 
 
-================================================
+-----------------------------------------
 ####  HIPAA Compliance Self-Assessment Checklist
 
 https://catalyze.io/hipaa-self-assessment-checklist
 
 
-================================================
+-----------------------------------------
 ####  Hosting Providers Willing to Sign Business Associate Agreements (BAA)  
 
-[Modulus.io](http://modulus.io/)  
+[Aptible.com](https://www.aptible.com/)  
 [Catalyze.io](http://catalyze.io)  
+[Microsoft Azure](https://azure.microsoft.com/en-us/)  
+  [Amazon Web Services](http://aws.amazon.com/)  
 
-================================================
+-----------------------------------------
 ####  HIPAA Compliant Scale Out Using Meteor
 
 Phase 1 - Development (1 server)  
-``sudo meteor``  
+``meteor``  
 
 Phase 2 - Platform as a Service (2 to 10 servers)  
-  [modulus.io - Node/Meteor App Hosting on AWS](https://modulus.io/)  
+  [aptible.com - Node/Meteor App Hosting on AWS]([Aptible.com](https://www.aptible.com/)    
   [compose.io - Mongo Hosting on AWS](http://www.mongohq.com/)  
 
-
 Phase 3 - Infrastructure as a Service (11+ servers)    
-  [Amazon Web Services](http://aws.amazon.com/)  
-  [Deploying a Meteor App on Elastic Beanstalk](https://groups.google.com/forum/#!topic/meteor-talk/VxMQzpVFpME)   
+  [Amazon Container Services](https://aws.amazon.com/ecs/)  
+  [Azure Container Services](https://azure.microsoft.com/en-us/services/container-service/)  
 
 Phase 4 - Federal HIPAA  
   [Amazon Web Services - HIPAA/Federal Tier](http://aws.amazon.com/compliance/)  
   [Amazon Web Services - HIPAA Whitepaper](https://aws.amazon.com/about-aws/whats-new/2009/04/06/whitepaper-hipaa/)  
+  [Azure HIPAA & HITRUST](https://www.microsoft.com/en-us/trustcenter/Compliance/HIPAA)  
 
-
-==================================
+-----------------------------------------
 #### Roles API  
 
 The Roles API has two primary method:
@@ -120,7 +121,7 @@ There is also an ``isInRole`` convenience helper for client side.
 ````
 
 
-==================================
+-----------------------------------------
 #### Crypto API  
 
 There's technically nothing in HIPAA that specifically says that an organization has to encrypt their data at rest; but many people prefer to do so.  Of those who do, there's also differing opinions on whether the default encryption is sufficient that comes with the operating system or database.  For those who are particularly paranoid, and don't trust the operating system or database, the ``clinical:hipaa`` package comes with an AES encryption algorithm, so you can do in-app encryption and ensure that your data-at-rest is secure.
@@ -135,13 +136,13 @@ console.log(decrypted.toString(CryptoJS.enc.Utf8));
 // Message
 ````
 
-================================================
+-----------------------------------------
 ####  Hosting Providers Willing to Sign Business Associate Agreements (BAA)  
 
-[Modulus.io](http://modulus.io/)  
+[Aptible.com](https://www.aptible.com/)  
 [Catalyze.io](http://catalyze.io)  
 
-==================================
+-----------------------------------------
 #### Licensing  
 
 All code is MIT.  Use as you will.  Disrupt the system.  It needs all the help it can get.
